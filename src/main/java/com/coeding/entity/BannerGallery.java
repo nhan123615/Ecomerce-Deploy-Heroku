@@ -20,6 +20,6 @@ public class BannerGallery {
     private  Long id;
 
 
-    @Column(columnDefinition = "LONGBLOB")
+//    @Column(columnDefinition = "LONGBLOB")
     private byte[] image;
 }
