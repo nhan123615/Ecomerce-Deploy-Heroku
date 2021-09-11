@@ -67,7 +67,7 @@
                                     <br>
                                     <b>#Facebook test account</b>
                                     <br><br>
-                                    Username: <b>testing_oqulqma_facebook@tfbnw.net</b>
+                                    Username: <b>testing_wqycvda_facebook@tfbnw.net</b>
                                     <br>
                                     Password: <b>nhanle</b>
                                 </div>
