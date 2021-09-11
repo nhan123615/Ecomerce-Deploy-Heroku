@@ -26,10 +26,10 @@ public class Contact {
     private String subject;
     private boolean status;
 
-    @Column (columnDefinition = "LONGTEXT")
+//    @Column (columnDefinition = "LONGTEXT")
     private String message;
 
-    @Column (columnDefinition = "LONGTEXT")
+//    @Column (columnDefinition = "LONGTEXT")
     private String reply;
 
     @PrePersist

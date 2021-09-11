@@ -27,7 +27,7 @@ public class Product {
     private String productColor;
     private String shortDescription;
 
-    @Column(columnDefinition = "LONGTEXT")
+//    @Column(columnDefinition = "LONGTEXT")
     private String description;
     private int stockQuantity;
 
