@@ -34,9 +34,9 @@
                                 <div style="border: 2px solid rgba(253, 200, 69, .5);border-radius: 4px;background-color: rgba(253, 200, 69, 0.3);padding: 16px;margin-bottom: 10px">
                                     <b>Paypal test account</b>
                                     <br><br>
-                                    Username: <b>sb-o3c5c6605354@personal.example.com</b>
+                                    Username: <b>nhanle@personal.example.com</b>
                                     <br>
-                                    Password: <b>3q-UECd?</b>
+                                    Password: <b>nhan1236</b>
                                 </div>
 
                                 <h4>Payment Methods</h4>
