@@ -9,8 +9,8 @@ import com.coeding.entity.CustomerOrder;
 @Repository
 public interface OrderRepository extends JpaRepository<CustomerOrder, Long> {
 
-	@Query(value = "select count(*) from CustomerOrder o where day(o.orderDate) = ?1 "
-			+ "and month(o.orderDate) = ?2 and year(o.orderDate) = ?3 and o.status = true")
+	@Query(value = "select count(*) from CustomerOrder o where   extract (day from o.orderDate)  = ?1 "
+			+ "and extract (month from o.orderDate)  = ?2 and extract (year from o.orderDate) = ?3 and o.status = true")
 	int countOrderToDay(int day, int month, int year);
 
 }

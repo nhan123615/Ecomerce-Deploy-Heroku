@@ -14,8 +14,8 @@ import java.util.List;
 public interface PaymentRepository extends JpaRepository<Payment,Long>  {
     Payment findTop1ByCustomerOrderIdOrderByPaymentDateDesc(Long customerOrderId);
     Long countByCustomerOrderId(Long customerOrderId);
-    @Query(value = "select sum(p.amount) from payments p where month(p.payment_date) = ?1 "
-    		+ "and year(p.payment_date) = ?2 and p.status = true", nativeQuery = true)
+    @Query(value = "select sum(p.amount) from payments p where extract (month from p.payment_date) = ?1 "
+    		+ "and extract (year from p.payment_date) = ?2 and p.status = true", nativeQuery = true)
 	Double totalPriceInPaymentByMonthYear(int month, int year);
     @Query(value = "SELECT * FROM payments p INNER JOIN customer_order o ON p.customer_order_id = o.id "
     		+ "WHERE o.customer_id = ?1 "

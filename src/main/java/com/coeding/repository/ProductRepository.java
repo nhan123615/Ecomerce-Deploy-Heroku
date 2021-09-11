@@ -24,7 +24,7 @@ public interface ProductRepository extends JpaRepository<Product,Long>  {
     List<Product> findByProductNameContainsAndAndCategoryId(String productName,Long categoryId);
 
     @Query(
-            value = "SELECT ca.product_id FROM payments p INNER JOIN customer_order_cart_items c ON  c.customer_order_id = p.customer_order_id INNER JOIN cart_item ca ON c.cart_items_id = ca.id WHERE p.status =true AND MONTH(p.payment_date)=?1 AND YEAR(p.payment_date)=?2 GROUP BY ca.product_id ORDER BY sum(ca.selling_quantity) DESC LIMIT 5",
+            value = "SELECT ca.product_id FROM payments p INNER JOIN customer_order_cart_items c ON  c.customer_order_id = p.customer_order_id INNER JOIN cart_item ca ON c.cart_items_id = ca.id WHERE p.status =true AND extract (month from p.payment_date) =?1 AND extract (year from p.payment_date) =?2 GROUP BY ca.product_id ORDER BY sum(ca.selling_quantity) DESC LIMIT 5",
             nativeQuery = true)
     List<Long> findTop5(int month, int year);
 
